@@ -1,4 +1,8 @@
-" Plugins
+" Plugins (see https://github.com/junegunn/vim-plug)
+"
+" Installation:
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 let g:rehash256 = 1
 
 call plug#begin('~/.vim/plugged')
