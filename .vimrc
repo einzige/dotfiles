@@ -12,6 +12,7 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'slim-template/vim-slim'
 Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
@@ -33,3 +34,6 @@ autocmd FileType ruby,rb,slim,coffee,javascript,js,swift,markdown,md autocmd Buf
 highlight ExtraWhitespace ctermbg=red guibg=red
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+\%#\@<!$/
+
+" Nerdtree activate on ctrl+n
+map <C-n> :NERDTreeToggle<CR>
