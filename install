@@ -14,7 +14,7 @@ done
 
 for dotfile in `ls`
 do
-    if [ $dotfile == "install" ]
+    if [ $dotfile == "install" ] || [ $dotfile == "README.md" ]
     then
         continue
     fi
