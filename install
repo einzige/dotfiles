@@ -1,5 +1,17 @@
 #!/usr/bin/env bash
 
+while getopts ":f" opt; do
+    case $opt in
+        f)
+            force_cleaning=true
+            ;;
+        \?)
+            echo "Invalid option: -$OPTARG" >&2
+            exit
+            ;;
+    esac
+done
+
 for dotfile in `ls`
 do
     if [ $dotfile == "install" ]
@@ -9,14 +21,20 @@ do
 
     dst="$HOME/.$(basename "${dotfile%.*}")"
     src="$(pwd)/$dotfile"
+
+    if [ $force_cleaning ]
+    then
+        rm $dst 2>/dev/null
+    fi
+
     ln -s "$src" "$dst"
 
     case "$?" in
         0)
-        echo "Successfully installed .$dotfile"
-        ;;
+            echo "Successfully installed .$dotfile"
+            ;;
         1)
-        echo "Failed installing .$dotfile"
-        ;;
+            echo "Failed installing .$dotfile"
+            ;;
     esac
 done
