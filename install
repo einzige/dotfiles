@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+for dotfile in `ls`
+do
+    if [ $dotfile == "install" ]
+    then
+        continue
+    fi
+
+    dst="$HOME/.$(basename "${dotfile%.*}")"
+    src="$(pwd)/$dotfile"
+    ln -s "$src" "$dst"
+
+    case "$?" in
+        0)
+        echo "Successfully installed .$dotfile"
+        ;;
+        1)
+        echo "Failed installing .$dotfile"
+        ;;
+    esac
+done
