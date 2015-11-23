@@ -128,3 +128,6 @@ alias gl="git log --graph --abbrev-commit --decorate --date=relative --format=fo
 
 # My apps
 PATH=$PATH:/home/szinin/Apps/RubyMine-7.1.4/bin
+
+# Git
+source ~/.git-completion
