@@ -7,13 +7,21 @@ let g:rehash256 = 1
 
 call plug#begin('~/.vim/plugged')
 
+" Colorschemes
 Plug 'tomasr/molokai' " Colorscheme
-Plug 'vim-ruby/vim-ruby'
+
+" Framework integrations
 Plug 'tpope/vim-rails'
+Plug 'tpope/vim-fugitive'
+
+" Syntax higlighters
+Plug 'vim-ruby/vim-ruby'
 Plug 'slim-template/vim-slim'
+Plug 'kchmck/vim-coffee-script'
+
+" Navigation plugins
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
-Plug 'kchmck/vim-coffee-script'
 
 call plug#end()
 
