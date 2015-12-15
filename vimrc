@@ -31,6 +31,11 @@ colorscheme molokai
 set nu
 set relativenumber
 
+" Disable creating swp files inside the working directory
+set swapfile
+set dir=/tmp
+set viminfo='10,\"100,:20,%,n~/.viminfo
+
 " Tabsize
 set expandtab
 set tabstop=2
