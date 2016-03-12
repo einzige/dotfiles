@@ -52,3 +52,6 @@ match ExtraWhitespace /\s\+\%#\@<!$/
 
 " Nerdtree activate on ctrl+n
 map <C-n> :NERDTreeToggle<CR>
+
+" Highlight search
+set hlsearch
